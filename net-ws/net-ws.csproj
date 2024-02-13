@@ -15,7 +15,9 @@
 		<PackageProjectUrl>https://github.com/PRCV1/net-ws</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/PRCV1/net-ws</RepositoryUrl>
 		<RepositoryType>git</RepositoryType>
-		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
+		<Authors>Lukas Müller</Authors>
+		<Description>Mit net-ws wird ein einfacher Webserver im aktuellen Verzeichnis gestartet, der die lokale Entwicklung und das Testen von Webanwendungen erleichtert.</Description>
 	</PropertyGroup>
 
 	<ItemGroup>
