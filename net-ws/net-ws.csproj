@@ -18,6 +18,7 @@
 		<PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
 		<Authors>Lukas Müller</Authors>
 		<Description>Mit net-ws wird ein einfacher Webserver im aktuellen Verzeichnis gestartet, der die lokale Entwicklung und das Testen von Webanwendungen erleichtert.</Description>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -29,6 +30,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<None Include="..\README.md">
+		  <Pack>True</Pack>
+		  <PackagePath>\</PackagePath>
+		</None>
 		<None Include="licenses\LICENSE.txt" Pack="True" PackagePath="\" />
 	</ItemGroup>
 
