@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
 	<PropertyGroup>
 		<TargetFramework>net8.0</TargetFramework>
@@ -6,15 +6,16 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 		<RootNamespace>net_ws</RootNamespace>
 		<InvariantGlobalization>true</InvariantGlobalization>
-		
 		<DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
-		
-		
-
 		<IsPackable>true</IsPackable>
 		<PackAsTool>true</PackAsTool>
 		<ToolCommandName>net-ws</ToolCommandName>
 		<PackageOutputPath>./nupkg</PackageOutputPath>
+		<Title>net-ws</Title>
+		<PackageProjectUrl>https://github.com/PRCV1/net-ws</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/PRCV1/net-ws</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -23,6 +24,10 @@
 
 	<ItemGroup>
 		<Folder Include="Properties\PublishProfiles\" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Include="licenses\LICENSE.txt" Pack="True" PackagePath="\" />
 	</ItemGroup>
 
 </Project>
