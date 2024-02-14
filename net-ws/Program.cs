@@ -1,27 +1,43 @@
+using System.Net;
+using CommandLine;
 using Microsoft.Extensions.FileProviders;
+using net_ws;
 
-foreach (var arg in args)
+await Parser.Default.ParseArguments<CliOptions>(args)
+    .WithParsedAsync(RunServerWithArgs);
+
+static async Task RunServerWithArgs(CliOptions options)
 {
-    Console.WriteLine(arg);
+    var builder = WebApplication.CreateSlimBuilder();
+
+    builder.WebHost.ConfigureKestrel((_, serverOptions) =>
+    {
+        IPAddress ipAddress = options.External
+            ? IPAddress.Any
+            : IPAddress.Loopback;
+        
+        serverOptions.Listen(ipAddress, options.Port);
+    });
+
+    if (options.Silent)
+    {
+        builder.Logging.ClearProviders();
+    }
+
+    builder.Services.AddDirectoryBrowser();
+
+    var app = builder.Build();
+
+    var fileProvider = new PhysicalFileProvider(Directory.GetCurrentDirectory())
+    {
+        UsePollingFileWatcher = true
+    };
+
+    app.UseFileServer(new FileServerOptions()
+    {
+        FileProvider = fileProvider,
+        EnableDirectoryBrowsing = true
+    });
+
+    await app.RunAsync();
 }
-
-Console.WriteLine(Directory.GetCurrentDirectory());
-
-var builder = WebApplication.CreateSlimBuilder();
-
-builder.Services.AddDirectoryBrowser();
-
-var app = builder.Build();
-
-var fileProvider = new PhysicalFileProvider(Directory.GetCurrentDirectory())
-{
-    UsePollingFileWatcher = true
-};
-
-app.UseFileServer(new FileServerOptions()
-{
-    FileProvider = fileProvider,
-    EnableDirectoryBrowsing = true
-});
-
-await app.RunAsync();
