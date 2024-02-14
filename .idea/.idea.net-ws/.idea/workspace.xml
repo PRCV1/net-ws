@@ -9,16 +9,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ed8111ce-c5c0-4993-8a60-c83eed24abdc" name="Changes" comment="" />
+    <list default="true" id="ed8111ce-c5c0-4993-8a60-c83eed24abdc" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/net-ws/CliOptions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.net-ws/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.net-ws/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/net-ws/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/net-ws/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/net-ws/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/net-ws/Properties/launchSettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/net-ws/net-ws.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/net-ws/net-ws.csproj" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 5
-}]]></component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2cHdU0KbgTlEHRf3517KWxaAm67" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -26,8 +38,12 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    ".NET Launch Settings Profile.net-ws: http.executor": "Debug",
+    ".NET Project.net-ws start.executor": "Debug",
+    "Publish to IIS.net-ws: FolderProfile.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "1.1.0",
     "ignore.virus.scanning.warn.message": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -44,10 +60,28 @@
     ]
   }
 }]]></component>
-  <component name="RunManager" selected=".NET Launch Settings Profile.net-ws: http">
+  <component name="RunManager" selected=".NET Project.net-ws start">
     <configuration name="net-ws: FolderProfile" type="DotNetMsBuildPublish" factoryName="Publish to IIS">
       <riderPublish configuration="Release" platform="Any CPU" publish_profile="FolderProfile.pubxml" pubxml_path="$PROJECT_DIR$/net-ws/Properties/PublishProfiles/FolderProfile.pubxml" uuid_high="4157233361703290552" uuid_low="-6810664061363820102" />
       <method v="2" />
+    </configuration>
+    <configuration name="net-ws start" type="DotNetProject" factoryName=".NET Project">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/net-ws/bin/Debug/net8.0/net-ws.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/net-ws" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/net-ws/net-ws.csproj" />
+      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
+      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
+      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
+      <option name="PROJECT_KIND" value="DotNetCore" />
+      <option name="PROJECT_TFM" value="net8.0" />
+      <method v="2">
+        <option name="Build" />
+      </method>
     </configuration>
     <configuration name="net-ws: http" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/net-ws/net-ws.csproj" />
@@ -65,7 +99,10 @@
       </method>
     </configuration>
     <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
-      <deployment type="dockerfile" />
+      <deployment type="dockerfile">
+        <settings />
+      </deployment>
+      <EXTENSION ID="com.jetbrains.rider.docker.debug" isFastModeEnabled="true" isSslEnabled="false" />
       <method v="2" />
     </configuration>
     <configuration name="net-ws/Dockerfile" type="docker-deploy" factoryName="dockerfile" server-name="Docker">
@@ -80,6 +117,12 @@
       <EXTENSION ID="com.jetbrains.rider.docker.debug" isFastModeEnabled="true" isSslEnabled="false" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue=".NET Launch Settings Profile.net-ws: http" />
+      <item itemvalue=".NET Project.net-ws start" />
+      <item itemvalue="Docker.net-ws/Dockerfile" />
+      <item itemvalue="Publish to IIS.net-ws: FolderProfile" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -90,6 +133,8 @@
       <option name="presentableId" value="Default" />
       <updated>1707772450885</updated>
       <workItem from="1707772452175" duration="770000" />
+      <workItem from="1707942238648" duration="1684000" />
+      <workItem from="1707943942284" duration="2151000" />
     </task>
     <servers />
   </component>
